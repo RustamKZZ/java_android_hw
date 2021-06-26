@@ -38,12 +38,7 @@ public class MainClass {
     }
 
     public static boolean task10and20(int x1, int x2) {
-        int c = x1 + x2;
-        if (c >= 10 && c <= 20) {
-            return true;
-        } else {
-            return false;
-        }
+        return (x1 + x2 >= 10) && (x1 + x2 <= 20);
     }
 
     public static void isPositiveOrNegative(int x) {
@@ -55,23 +50,17 @@ public class MainClass {
     }
 
     public static boolean isNegative(int y) {
-        if (y < 0){
-            return true;
-        }else {
-            return false;
-        }
+        return y < 0;
     }
     public static void greetings(String name){
         System.out.println("Привет, " + name + "!");
     }
 
     public static void isYears (int a){
-        if (a%4 > 0){
-            System.out.println(a + " год невисокосный");
-        }else if (a%100 > 0){
-            System.out.println(a + " год  високосный");
-        }else if (a%400 > 0){
-            System.out.println(a + " год невисокосный");
+        if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0) {
+            System.out.println(a + " год високосный");
+        } else {
+            System.out.println(a + " год не високосный");
         }
     }
 }
